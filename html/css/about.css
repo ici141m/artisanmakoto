@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#aboutshef {
+	float: left;
+	width:65%;
+	background: #fffff8;
+	border-left: double 7px #d3c44e;
+	border-right: double 7px #d3c44e;
+	padding: 1em;
+	margin-bottom: 20px;
+/* margin-bottom: 20px;
+	background: whitesmoke;
+	border-left: double 7px #4ec4d3;
+	border-right: double 7px #4ec4d3;
+	padding: 1em;
+	    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+		
+    background: -moz-linear-gradient(#00469b,#e73820);
+    background: -webkit-linear-gradient(#00469b,#e73820);
+    background: linear-gradient(to right,#00469b,#e73820);
+    color: #FFF;
+*/
+}
+#shefpic {
+	float: right;
+	width:23%;
+}
+.clearbparts {
+	clear: both;
+}
+.flexgroup {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+.flexgroup dl{
+  width: 30%;
+}
+
+#main dl{
+  padding-bottom: 20px;
+}
+#main dl dt{
+  margin-bottom: 0.5em;
+}
+
+
+/*-------------600pxブレイク---------------*/
+@media screen and (max-width:600px){
+#aboutshef {
+	display: block;
+	width:90%;
+}
+#shefpic {
+	display: block;
+	width:100%;
+	text-align: center;
+}
+.flexgroup {
+	display: block;
+	width:100%;
+}
+.flexgroup dl {
+	display: block;
+	width:100%;
+	text-align: center;
+}
+.flexgroup dl dd{
+	width: 300px;
+	text-align: left;
+	margin: 0 auto;
+}
+}

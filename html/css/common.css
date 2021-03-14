@@ -1,0 +1,401 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*-------------js top---------------*/
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #3f98ef;
+  opacity: 0.6;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/*-------------pc用レイアウト---------------*/
+html {
+overflow-y: scroll;
+}
+a {
+    text-decoration: none;
+		color:#00469b;
+}
+a:hover{
+	color:#998675;
+	text-decoration:underline;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+#container {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1150px;
+	min-width: 320px;
+	line-height: 1.8;
+	color:#818181;
+	background-color: #fff;
+
+}
+body{
+  background-color: #edde7b;
+}
+#check320{
+	display:none;
+}
+/*-------------header---------------*/
+header {
+	display: flex;
+	min-height: 80px;
+	padding: 10px 2%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-bottom: 1px solid #00469b;
+}
+#headerLogo {
+	width: 111px;
+}
+header nav {
+	margin-top: auto;
+	width: 70%;
+}
+header ul {
+	text-align: center;
+	font-weight: bold;
+}
+header nav ul li {
+	font-size: 125%;
+	display: inline-block;
+	padding-left: 3%;
+	line-height: 1.1;
+	padding-right: 3%;
+}
+header nav ul li:hover {
+}
+
+header nav ul li span {
+	line-height: 1.1;
+	font-size: 70%;
+}
+#tel {
+	background: url(../images/tel.png) no-repeat left top;
+	width: 145px;
+	text-align: right;
+	color:#00469b;
+}
+.box1 { order: 3; margin-left: auto;}
+.box2 { order: 1; }
+.box3 { order: 2; margin-left: auto;}
+
+/*-------------main---------------*/
+h2 {
+	font-size: 300%;
+	line-height: 0.9;
+	margin-bottom: 40px;
+	margin-top: 180px;
+	text-align:center;
+	color:#00469b;
+}
+h2 span {
+	font-size: 50%;
+	color:#e73820;
+}
+#main {
+	padding: 20px 8% 120px 8%;
+}
+.pconly {
+  margin-top:10px;
+}
+.sponly {
+	display: none;
+  margin-top:10px;
+}
+/*-------------css zoom---------------*/
+
+.light{
+  border: 1px solid #ddd;
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+.light img{
+  width: 100%;
+  transition-duration: 0.5s;
+}
+.light:hover img{
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+/*-------------css light top---------------*/
+.goMenu{
+  width: 203px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.goMenu img{
+  width: 100%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.goMenu:hover img{
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+/*-------------css light about---------------*/
+.flexgroup dt{
+  transition-duration: 0.5s;
+}
+.flexgroup dt img{
+  cursor: pointer;
+}
+.flexgroup dt:hover img{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+  transition-duration: 0.5s;
+}
+/*-------------css dark---------------*/
+.img_wrap{
+  border: 1px solid #ddd;
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+  margin-top: 100px;
+
+}
+.img_wrap img{
+  width: 100%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.img_wrap:hover img{
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+
+/*-------------footer---------------*/
+footer {
+	background: #00469b;
+	font-size: 87.5%;
+	padding: 30px 2%;
+	color: #fff;
+}
+footer a{ color: #fff;
+}
+#footerflex {
+	border-bottom:1px solid #fff;
+}
+#footerShopInfo {
+	width: 250px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+#footerflex {
+	display:flex;
+  flex-wrap: wrap;
+}
+#footerLogo {
+	width: 110px;
+}
+#footerflex ul {
+  line-height: 3;
+  margin-bottom: auto;
+  margin-left: auto;
+  font-weight: bold;
+  padding-left: 30px;
+  max-width:455px;
+
+}
+#footerflex ul li {
+	display: inline-block;
+	padding-left: 0.9em;
+	padding-right: 0.9em;
+  vertical-align: middle;
+}
+#footerflex ul li:nth-child(n+6){
+  padding: 0;
+}
+footer p:nth-child(3){
+text-align: center;
+}
+.visuals {
+margin-top: 10px;}
+
+
+/*-------------945pxfooter調整---------------*/
+@media screen and (max-width:945px){
+#footerShopInfo {
+  width: 60%;
+}
+#footerflex ul {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 455px;
+  padding:0;
+  margin-top: 20px;
+}
+#footerShopInfo:after {
+border-bottom: 1px solid #fff;
+width:10vw;
+}
+
+#footerflex {
+  justify-content: flex-start;
+}
+}
+
+/*-------------920pxheader調整---------------*/
+
+@media screen and (max-width:920px){
+header nav {
+max-width:320px;
+}
+header nav ul li{
+padding-top:20px;
+}
+
+}
+/*-------------600px主にnews#steakCurry調整---------------*/
+@media screen and (max-width:620px){
+
+header {
+flex-direction: column;
+align-items: center;
+}
+
+.box3{
+  margin:0 auto;}
+.box1 { order: 1; margin-left: auto;}
+.box2 { order: 2; }
+.box3 { order: 3; }
+#tel{ 
+  padding-left:1em;
+}
+h2 {
+	margin-top: 130px;
+}
+}
+/*-------------480pxブレイク---------------*/
+
+@media screen and (max-width:480px) {
+header {
+display: block;
+margin:0 auto;
+}
+header {
+	padding: 0 0 10 2%;
+}
+#headerLogo,header nav {
+	margin:0 auto;
+}
+header nav ul{
+	margin:0 auto;
+  margin-top: 10px;
+}
+header nav ul li {
+	display: block;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	font-size: 100%
+}
+.sponly {
+	display: block;
+}
+.pconly {
+	display: none;
+}
+
+#tel {
+	margin-left: auto;}
+
+h2{
+font-size: 250%;
+margin-top: 100px;
+
+}
+#footerflex {
+  display: block;
+}
+#footerShopInfo {
+  width: 100%;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#footerLogo {
+  margin: 0 auto;
+}
+
+#footerflex ul {
+  text-align: center;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+	border-top:1px solid #fff;
+
+}
+#footerflex ul li {
+  display: block;
+}
+#footerflex ul br{
+  display: none;
+}
+}
+/*-------------カレント---------------*/
+#top nav .top a,
+#about nav .about a,
+#menu nav .menu a,
+#lunch nav .lunch a,
+#access nav .access a{
+  color:#998675;
+	text-decoration:underline;
+}
+/*
+#top nav .top ,
+#about nav .about ,
+#menu nav .menu ,
+#lunch nav .lunch ,
+#access nav .access {
+  background: url(../images/greenpeint.png) no-repeat center center;
+}*/
+
+
+#top footer .top a,
+#about footer .about a,
+#menu footer .menu a,
+#lunch footer .lunch a,
+#access footer .access a{
+  color:#998675;
+	text-decoration:underline;
+}
+

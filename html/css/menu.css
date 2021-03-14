@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+#moflist{
+	line-height: 3.5;
+	font-weight: bold;
+	color: #5c5c5c;
+}
+#memory{
+	background: url(../images/menu/menufrance_back.png) no-repeat right center;
+	min-height: 460px;
+}
+
+#main dl,#alcoolgroup{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top:50px;
+}
+#main dt{
+	width:35%;
+  margin-bottom: 20px;
+}
+#main dd{
+	width:57%;
+	padding: 0 0 1em 0;
+
+}
+.drink{
+  width: 40%;
+  padding: 1em;
+  background-color: #f2eddf;
+}
+.sd{
+  width: 40%;
+  padding: 1em;
+  background-color: #D7F0F2;
+}
+h3{
+  font-weight: bold;
+  color: #5c5c5c;
+  margin-bottom: 0.5em;
+  border-bottom: thin solid #B60D13;
+}
+#drinkgroup h3{
+text-align: center;
+}
+#drinkgroup h3:nth-child(4){
+	margin-top:50px;
+	margin-bottom:50px;
+}
+.menulist ul li, .drink li ul li{
+  list-style: square;
+  margin-left: 1.5em;
+}
+
+.menulist ul {
+  border: thin solid #DEDEDE;
+  background-color: #E8E8E8;
+}
+.drink li {
+	font-weight:bold;
+	color:#5c5c5c;
+}
+.drink:nth-child(2){
+  background-color: #fadadd;
+}
+/*#drinkgroup h3 {
+  background-color: #F8F0A3;
+}
+*//*-------------800pxブレイク---------------*/
+@media screen and (max-width:800px){
+#alcoolgroup {
+	display: block;
+	width:95%;
+}
+.drink {
+	width:95%;
+}
+.drink:nth-child(2){
+margin-top: 10px;
+}
+
+}
+/*-------------600pxブレイク---------------*/
+@media screen and (max-width:600px){
+#main dl {
+	display: block;
+	width:95%;
+}
+#main dl dt {
+	width:95%;
+	text-align:center;
+}
+#main dl dd {
+	width:95%;
+	padding:0;
+}
+
+}
