@@ -36,105 +36,113 @@
 
 /*-------------pc用レイアウト---------------*/
 html {
-overflow-y: scroll;
+  overflow-y: scroll;
 }
 a {
-    text-decoration: none;
-		color:#00469b;
+  text-decoration: none;
+  color: #00469b;
 }
-a:hover{
-	color:#998675;
-	text-decoration:underline;
+a:hover {
+  color: #998675;
+  text-decoration: underline;
 }
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 #container {
-	width: 100%;
-	margin: 0 auto;
-	max-width: 1150px;
-	min-width: 320px;
-	line-height: 1.8;
-	color:#818181;
-	background-color: #fff;
-
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1150px;
+  min-width: 320px;
+  line-height: 1.8;
+  color: #818181;
+  background-color: #fff;
 }
-body{
+body {
   background-color: #edde7b;
 }
-#check320{
-	display:none;
+#check320 {
+  display: none;
 }
 /*-------------header---------------*/
 header {
-	display: flex;
-	min-height: 80px;
-	padding: 10px 2%;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	border-bottom: 1px solid #00469b;
+  display: flex;
+  min-height: 80px;
+  padding: 10px 2%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #00469b;
+  align-items: center;
 }
 #headerLogo {
-	width: 111px;
+  width: 111px;
 }
 header nav {
-	margin-top: auto;
-	width: 70%;
+  margin-top: auto;
+  width: 80%;
 }
 header ul {
-	text-align: center;
-	font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
 header nav ul li {
-	font-size: 125%;
-	display: inline-block;
-	padding-left: 3%;
-	line-height: 1.1;
-	padding-right: 3%;
+  font-size: 125%;
+  display: inline-block;
+  padding-left: 3%;
+  line-height: 1.1;
+  padding-right: 3%;
+}
+header nav ul li:hover {
 }
 
 header nav ul li span {
-	line-height: 1.1;
-	font-size: 70%;
+  line-height: 1.1;
+  font-size: 70%;
 }
 #tel {
-	background: url(../images/tel.png) no-repeat left top;
-	width: 145px;
-	text-align: right;
-	color:#00469b;
+  background: url(../images/tel.png) no-repeat left top;
+  width: 145px;
+  text-align: right;
+  color: #00469b;
 }
-.box1 { order: 3; margin-left: auto;}
-.box2 { order: 1; }
-.box3 { order: 2; margin-left: auto;}
+/* .box1 { order: 3; margin-left: auto;} */
+.box3 {
+  margin-left: auto;
+}
 
+.btn {
+  margin-left: auto;
+}
+
+.menu-bar {
+  margin-left: auto;
+}
 
 /*-------------main---------------*/
 h2 {
-	font-size: 300%;
-	line-height: 0.9;
-	margin-bottom: 40px;
-	margin-top: 180px;
-	text-align:center;
-	color:#00469b;
+  font-size: 300%;
+  line-height: 0.9;
+  margin-bottom: 40px;
+  margin-top: 180px;
+  text-align: center;
+  color: #00469b;
 }
 h2 span {
-	font-size: 50%;
-	color:#e73820;
+  font-size: 50%;
+  color: #e73820;
 }
-#main {
-	padding: 20px 8% 120px 8%;
-}
+
 .pconly {
-  margin-top:10px;
+  margin-top: 10px;
 }
 .sponly {
-	display: none;
-  margin-top:10px;
+  display: none;
+  margin-top: 10px;
 }
 /*-------------css zoom---------------*/
 
-.light{
+.light {
   border: 1px solid #ddd;
   width: 300px;
   margin: 0 auto;
@@ -272,101 +280,208 @@ width:10vw;
 
 /*-------------920pxheader調整---------------*/
 
-@media screen and (max-width:920px){
-header nav {
-max-width:320px;
-}
-header nav ul li{
-padding-top:20px;
+@media screen and (max-width: 805px) {
+  header nav {
+    max-width: 320px;
+  }
+  header nav ul li {
+    padding-top: 20px;
+  }
+
+  .menu-bar {
+    /* メニューを縦に */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* メニューの位置マイナス指定で画面外に */
+    right: -70%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(167, 148, 58, 0.7);
+    color: #efefef;
+    transition: 0.3s;
+  }
+
+  .menu-list {
+    /* メニューテキスト位置をリスト内中心に */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-list:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /***** メニューオープン時位置0にして画面内に *****/
+  .menu-bar.open {
+    position: absolute;
+    right: 0;
+  }
+
+  /**************** 以下、ハンバーガーボタンのスタイリング ****************/
+.btn {
+  /* ボタンの配置位置  */
+  /* position: fixed; */
+  /* top: 300px; */
+  right: 16px;
+  /* 最前面に */
+  z-index: 10;
+  /* ボタンの大きさ  */
+  width: 48px;
+  height: 48px;
 }
 
+/***** 真ん中のバーガー線 *****/
+.btn-line {
+  display: block;
+  /* バーガー線の位置基準として設定 */
+  position: relative;
+  /* 線の長さと高さ */
+  width: 100%;
+  height: 4px;
+  /* バーガー線の色 */
+  background-color: #d6d5d5;
+  transition: 0.2s;
+}
+
+/***** 上下のバーガー線 *****/
+.btn-line::before,
+.btn-line::after {
+  content: "";
+  /* 基準線と同じ大きさと色 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d6d5d5;
+  transition: 0.5s;
+}
+
+.btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-16px);
+}
+
+.btn-line::after {
+  /* 下の線の位置 */
+  transform: translateY(16px);
+}
+
+/***** メニューオープン時 *****/
+.btn-line.open {
+  /* 真ん中の線を透明に */
+  background-color: transparent;
+}
+
+.btn-line.open::before,
+.btn-line.open::after {
+  content: "";
+  background-color: #333;
+  transition: 0.2s;
+}
+
+.btn-line.open::before {
+  /* 上の線を傾ける */
+  transform: rotate(45deg);
+}
+
+.btn-line.open::after {
+  /* 上の線を傾ける */
+  transform: rotate(-45deg);
+}
+
+/**************** ここまで、ハンバーガーボタンのスタイリング ****************/
 }
 /*-------------600px主にnews#steakCurry調整---------------*/
-@media screen and (max-width:620px){
+@media screen and (max-width: 620px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
 
-header {
-flex-direction: column;
-align-items: center;
-}
+  /**************** 以下、メニューのスタイリング ****************/
 
-.box3{
-  margin:0 auto;}
-.box1 { order: 1; margin-left: auto;}
-.box2 { order: 2; }
-.box3 { order: 3; }
-#tel{ 
-  padding-left:1em;
-}
-h2 {
-	margin-top: 130px;
-}
+  .box1 {
+    margin-left: auto;
+  }
+  #tel {
+    padding-left: 1em;
+  }
+  h2 {
+    margin-top: 130px;
+  }
 }
 /*-------------480pxブレイク---------------*/
 
-@media screen and (max-width:480px) {
-header {
-display: block;
-margin:0 auto;
-}
-header {
-	padding: 0 0 10 2%;
-}
-#headerLogo,header nav {
-	margin:0 auto;
-}
-header nav ul{
-	margin:0 auto;
-  margin-top: 10px;
-}
-header nav ul li {
-	display: block;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	font-size: 100%
-}
-.sponly {
-	display: block;
-}
-.pconly {
-	display: none;
-}
+@media screen and (max-width: 480px) {
+  header {
+    display: block;
+    margin: 0 auto;
+  }
+  header {
+    padding: 0 0 10 2%;
+  }
+  #headerLogo,
+  header nav {
+    margin: 0 auto;
+  }
+  header nav ul {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  header nav ul li {
+    display: block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 100%;
+  }
+  .sponly {
+    display: block;
+  }
+  .pconly {
+    display: none;
+  }
 
-#tel {
-	margin-left: auto;}
+  #tel {
+    margin-left: auto;
+  }
 
-h2{
-font-size: 250%;
-margin-top: 100px;
+  h2 {
+    font-size: 250%;
+    margin-top: 100px;
+  }
+  #footerflex {
+    display: block;
+  }
+  #footerShopInfo {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
 
-}
-#footerflex {
-  display: block;
-}
-#footerShopInfo {
-  width: 100%;
-  padding: 0;
-  margin-top: 20px;
-  text-align: center;
-}
+  #footerLogo {
+    margin: 0 auto;
+  }
 
-#footerLogo {
-  margin: 0 auto;
-}
-
-#footerflex ul {
-  text-align: center;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-	border-top:1px solid #fff;
-
-}
-#footerflex ul li {
-  display: block;
-}
-#footerflex ul br{
-  display: none;
-}
+  #footerflex ul {
+    text-align: center;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #fff;
+  }
+  #footerflex ul li {
+    display: block;
+  }
+  #footerflex ul br {
+    display: none;
+  }
 }
 /*-------------カレント---------------*/
 #top nav .top a,
@@ -386,13 +501,27 @@ margin-top: 100px;
   background: url(../images/greenpeint.png) no-repeat center center;
 }*/
 
-
 #top footer .top a,
 #about footer .about a,
 #menu footer .menu a,
 #lunch footer .lunch a,
-#access footer .access a{
-  color:#998675;
-	text-decoration:underline;
+#access footer .access a {
+  color: #998675;
+  text-decoration: underline;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: "red";
+  color: inherit;
+  vertical-align: middle;
+  text-align: inherit;
+  font: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  
+}
