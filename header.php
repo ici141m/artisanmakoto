@@ -8,4 +8,5 @@
 <script type="text/javascript" src="http://artisanmakoto.local/wp-content/themes/artisanmakoto/js/jquery-3.4.1.min.js"></script><script type="text/javascript" src="js/gotop.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/gotop.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/humberger_menu.js"></script>
 <?php wp_head(); ?>
